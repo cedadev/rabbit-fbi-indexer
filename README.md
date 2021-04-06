@@ -9,6 +9,10 @@ dependencies such as iris and netCDF4
 Watched events:
 - DEPOSIT/REMOVE
 
+Exposed Queue Consumer Classes:
+- `rabbit_fbi_elastic_indexer.queue_consumers.FastFBIQueueConsumer`
+- `rabbit_fbi_elastic_indexer.queue_consumers.SlowFBIQueueConsumer`
+
 ## Configuration
 
 Configuration is handled using a YAML file. The full configuration options 

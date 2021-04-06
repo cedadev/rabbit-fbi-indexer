@@ -51,14 +51,14 @@ class FBSQueueConsumer(QueueHandler):
             raise
 
 
-class SlowFBSConsumer(FBSQueueConsumer):
+class SlowFBSQueueConsumer(FBSQueueConsumer):
     """
     Uses the full FBS update handler, reading the filesystem
     """
     HANDLER_CLASS = FBSUpdateHandler
 
 
-class FastFBSConsumer(FBSQueueConsumer):
+class FastFBSQueueConsumer(FBSQueueConsumer):
     """
     Uses the lightweight handler which only uses the message as a truth source
     """
