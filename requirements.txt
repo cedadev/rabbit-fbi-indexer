@@ -3,4 +3,4 @@ docopt==0.6.2
 elasticsearch==7.12.0
 git+https://github.com/cedadev/ceda-fbs
 git+https://github.com/cedadev/nappy
-git+https://github.com/cedadev/rabbit-index-ingest@a3c984f#egg=rabbit_indexer
+git+https://github.com/cedadev/rabbit-index-ingest@520ccc0#egg=rabbit_indexer
