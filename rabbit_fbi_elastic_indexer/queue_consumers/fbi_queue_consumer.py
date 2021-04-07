@@ -10,12 +10,12 @@ __contact__ = 'richard.d.smith@stfc.ac.uk'
 
 from rabbit_indexer.queue_handler import QueueHandler
 import logging
-from rabbit_fbi_elastic_indexer.handlers import FBSUpdateHandler, FastFBSUpdateHandler
+from rabbit_fbi_elastic_indexer.handlers import FBIUpdateHandler, FastFBIUpdateHandler
 
 logger = logging.getLogger()
 
 
-class FBSQueueConsumer(QueueHandler):
+class FBIQueueConsumer(QueueHandler):
     """
     Provides the callback function for the FBS scanning
     """
@@ -51,15 +51,15 @@ class FBSQueueConsumer(QueueHandler):
             raise
 
 
-class SlowFBSQueueConsumer(FBSQueueConsumer):
+class SlowFBIQueueConsumer(FBIQueueConsumer):
     """
     Uses the full FBS update handler, reading the filesystem
     """
-    HANDLER_CLASS = FBSUpdateHandler
+    HANDLER_CLASS = FBIUpdateHandler
 
 
-class FastFBSQueueConsumer(FBSQueueConsumer):
+class FastFBIQueueConsumer(FBIQueueConsumer):
     """
     Uses the lightweight handler which only uses the message as a truth source
     """
-    HANDLER_CLASS = FastFBSUpdateHandler
+    HANDLER_CLASS = FastFBIUpdateHandler

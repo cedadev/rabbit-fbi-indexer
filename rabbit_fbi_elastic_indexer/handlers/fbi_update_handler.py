@@ -22,7 +22,7 @@ if TYPE_CHECKING:
     from rabbit_indexer.utils.yaml_config import YamlConfig
 
 
-class FBSUpdateHandler(UpdateHandler):
+class FBIUpdateHandler(UpdateHandler):
     """
     Class to handle the live updates of the FBI index using events from
     rabbitMQ.
@@ -154,7 +154,7 @@ class FBSUpdateHandler(UpdateHandler):
             pass
 
 
-class FastFBSUpdateHandler(FBSUpdateHandler):
+class FastFBIUpdateHandler(FBIUpdateHandler):
     """
     Override deposit methods to provide a way to create the document
     without touching the filesystem or requiring the file to actually

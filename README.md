@@ -46,7 +46,7 @@ rabbit_server:
     - name: elasticsearch_update_queue_slow
       kwargs:
         auto_delete: false
-rabbit_indexer:
+indexer:
   queue_consumer_class: rabbit_fbi_elastic_indexer.queue_consumers.SlowFBSConsumer
 logging:
   log_level: info

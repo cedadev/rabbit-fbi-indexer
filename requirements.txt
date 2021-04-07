@@ -4,3 +4,4 @@ elasticsearch==7.12.0
 git+https://github.com/cedadev/ceda-fbs
 git+https://github.com/cedadev/nappy
 git+https://github.com/cedadev/rabbit-index-ingest@520ccc0#egg=rabbit_indexer
+tqdm==4.60.0

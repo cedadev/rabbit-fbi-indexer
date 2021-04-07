@@ -53,7 +53,7 @@ setup(
     license='BSD - See rabbit_indexer/LICENSE file for details',
     packages=find_packages(),
     package_data={
-        'rabbit_dbi_elastic_indexer': [
+        'rabbit_fbi_elastic_indexer': [
             'LICENSE',
         ],
     },
