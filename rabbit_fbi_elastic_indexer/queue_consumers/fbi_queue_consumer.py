@@ -9,6 +9,7 @@ __license__ = 'BSD - see LICENSE file in top-level package directory'
 __contact__ = 'richard.d.smith@stfc.ac.uk'
 
 from rabbit_indexer.queue_handler import QueueHandler
+from rabbit_indexer.utils import PathFilter
 import logging
 from rabbit_fbi_elastic_indexer.handlers import FBIUpdateHandler, FastFBIUpdateHandler
 
@@ -19,6 +20,12 @@ class FBIQueueConsumer(QueueHandler):
     """
     Provides the callback function for the FBS scanning
     """
+    def __init__(self):
+        super().__init__()
+
+        filter_kwargs = self.conf.get('indexer','path_filter', default={})
+        self.path_filter = PathFilter(**filter_kwargs)
+
     def callback(self, ch, method, properties, body, connection):
         """
         Callback to run during basic consume routine.
@@ -38,6 +45,13 @@ class FBIQueueConsumer(QueueHandler):
             self.acknowledge_message(ch, method.delivery_tag, connection)
             return
 
+        # Check if there are any path filters
+        allowed = self.path_filter.allow_path(message.filepath)
+        if not allowed:
+            self.acknowledge_message(ch, method.delivery_tag, connection)
+            return
+
+        # Try to processs the event
         try:
             if message.action in ['DEPOSIT', 'REMOVE']:
                 self.queue_handler.process_event(message)
