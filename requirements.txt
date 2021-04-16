@@ -1,9 +1,11 @@
+anytree==2.8.0
 brotlipy==0.7.0
 certifi==2020.12.5
 chardet==3.0.4
 click==6.7
 cycler==0.10.0
 cytoolz==0.11.0
+git+https://github.com/cedadev/directory-tree#egg=directory-tree
 docopt==0.6.2
 elasticsearch==7.12.0
 git+https://github.com/cedadev/ceda-elasticsearch-tools
