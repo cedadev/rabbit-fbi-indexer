@@ -1,8 +1,6 @@
 anytree==2.8.0
 brotlipy==0.7.0
 certifi==2020.12.5
-cf_xarray==0.5.2
-cftime==1.5.0
 chardet==3.0.4
 click==6.7
 cycler==0.10.0
@@ -12,7 +10,7 @@ docopt==0.6.2
 elasticsearch==7.12.0
 git+https://github.com/cedadev/ceda-elasticsearch-tools
 git+https://github.com/cedadev/ceda-fbs
-git+https://github.com/cedadev/nappy
+git+https://github.com/cedadev/nappy@a0809c4569e9829fa78bcfc9607b649d5cca2309
 git+https://github.com/cedadev/rabbit-index-ingest#egg=rabbit_indexer
 HeapDict==1.0.1
 ldap3==2.9
@@ -28,5 +26,4 @@ requests-aws4auth==0.9
 tqdm==4.60.0
 voluptuous==0.11.5
 xmltodict==0.12.0
-xarray==0.18.2
 zict==2.0.0
