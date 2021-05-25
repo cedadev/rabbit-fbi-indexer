@@ -13,6 +13,7 @@ git+https://github.com/cedadev/ceda-fbs
 git+https://github.com/cedadev/nappy
 git+https://github.com/cedadev/rabbit-index-ingest#egg=rabbit_indexer
 HeapDict==1.0.1
+ldap3==2.9
 locket==0.2.0
 pandas==1.2.3
 partd==1.1.0
