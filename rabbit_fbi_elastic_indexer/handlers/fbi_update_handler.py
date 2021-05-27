@@ -12,6 +12,7 @@ from ceda_elasticsearch_tools.index_tools import CedaFbi
 from rabbit_indexer.index_updaters.base import UpdateHandler
 from elasticsearch.helpers import BulkIndexError
 from fbs.proc.file_handlers.handler_picker import HandlerPicker
+from fbs.proc.common_util.util import LDAPIdentifier
 import os
 
 # Typing imports
@@ -51,6 +52,8 @@ class FBIUpdateHandler(UpdateHandler):
                 'timeout': 30
             }
         )
+        ldap_hosts = self.conf.get('ldap_configuration', 'hosts')
+        self.ldap_interface = LDAPIdentifier(ldap_hosts)
 
     @staticmethod
     def load_handlers() -> 'HandlerPicker':
@@ -107,6 +110,13 @@ class FBIUpdateHandler(UpdateHandler):
 
                 if spot is not None:
                     doc[0]['info']['spot_name'] = spot
+
+                # Replace the UID and GID with name and group
+                uid = doc[0]['info']['user']
+                gid = doc[0]['info']['group']
+
+                doc[0]['info']['user'] = self.ldap_interface.get_user(uid)
+                doc[0]['info']['group'] = self.ldap_interface.get_group(gid)
 
                 indexing_list = [{
                     'id': self.pt.generate_id(path),
