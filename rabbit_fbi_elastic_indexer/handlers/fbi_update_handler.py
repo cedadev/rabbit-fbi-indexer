@@ -53,7 +53,7 @@ class FBIUpdateHandler(UpdateHandler):
             }
         )
         ldap_hosts = self.conf.get('ldap_configuration', 'hosts')
-        self.ldap_interface = LDAPIdentifier(ldap_hosts)
+        self.ldap_interface = LDAPIdentifier(server=ldap_hosts, auto_bind=True)
 
     @staticmethod
     def load_handlers() -> 'HandlerPicker':
