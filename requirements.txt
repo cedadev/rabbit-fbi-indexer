@@ -12,7 +12,7 @@ cytoolz==0.11.0
 git+https://github.com/cedadev/directory-tree#egg=directory-tree
 docopt==0.6.2
 elasticsearch==7.12.0
-git+https://github.com/cedadev/ceda-elasticsearch-tools
+git+https://github.com/cedadev/ceda-elasticsearch-tools@0e6c51b
 git+https://github.com/cedadev/ceda-fbs
 git+https://github.com/cedadev/nappy@a0809c4569e9829fa78bcfc9607b649d5cca2309
 git+https://github.com/cedadev/rabbit-index-ingest#egg=rabbit_indexer
