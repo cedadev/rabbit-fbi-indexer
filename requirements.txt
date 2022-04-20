@@ -12,7 +12,7 @@ cytoolz==0.11.0
 ceda-directory-tree==1.0.0
 docopt==0.6.2
 elasticsearch==7.12.0
-git+https://github.com/cedadev/ceda-elasticsearch-tools@deeec99
+git+https://github.com/cedadev/ceda-elasticsearch-tools@73b5a68
 git+https://github.com/cedadev/ceda-fbs
 git+https://github.com/cedadev/nappy@a0809c4569e9829fa78bcfc9607b649d5cca2309
 git+https://github.com/cedadev/rabbit-index-ingest#egg=rabbit_indexer
@@ -20,7 +20,7 @@ HeapDict==1.0.1
 ldap3==2.9
 locket==0.2.0
 netcdf-flattener==1.2.0
-numpy==1.20.3
+numpy==1.21.6
 pandas==1.2.3
 partd==1.1.0
 pika==1.2.0
