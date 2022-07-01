@@ -20,7 +20,7 @@ HeapDict==1.0.1
 ldap3==2.9
 locket==0.2.0
 netcdf-flattener==1.2.0
-numpy==1.21.6
+numpy==1.22.0
 pandas==1.2.3
 partd==1.1.0
 pika==1.2.0
