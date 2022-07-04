@@ -15,7 +15,7 @@ elasticsearch==7.12.0
 git+https://github.com/cedadev/ceda-elasticsearch-tools@048528c
 git+https://github.com/cedadev/ceda-fbs
 git+https://github.com/cedadev/nappy@a0809c4569e9829fa78bcfc9607b649d5cca2309
-git+https://github.com/cedadev/rabbit-index-ingest@70a6efd#egg=rabbit_indexer
+git+https://github.com/cedadev/rabbit-index-ingest#egg=rabbit_indexer
 HeapDict==1.0.1
 ldap3==2.9
 locket==0.2.0
