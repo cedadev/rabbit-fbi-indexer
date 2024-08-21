@@ -1,0 +1,11 @@
+# Run this to compile to requirements.txt
+# uv pip compile --allow-unsafe --no-annotate --output-file=requirements.txt --resolver=backtracking --no-strip-extras requirements.txt.in --python-version=3.11 --python=3.11 --upgrade
+
+elasticsearch==7.12.0
+git+https://github.com/cedadev/ceda-elasticsearch-tools@048528c
+git+https://github.com/cedadev/ceda-fbs
+git+https://github.com/cedadev/rabbit-index-ingest#egg=rabbit_indexer
+
+
+# This seems to be a deb of ceda-fbs, but isn't specified there.
+ldap3==2.9
