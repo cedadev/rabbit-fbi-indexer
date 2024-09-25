@@ -5,7 +5,7 @@ anytree==2.8.0
 brotlipy==0.7.0
 cartopy==0.23.0
 ceda-directory-tree==1.0.0
-ceda-elasticsearch-tools @ git+https://github.com/cedadev/ceda-elasticsearch-tools@048528cce2891ac565dcb441c76a2f1a054b6218
+ceda-elasticsearch-tools @ git+https://github.com/cedadev/ceda-elasticsearch-tools@d365338d7243d1bff2a1266c2129ce72a79b2af1
 certifi==2020.12.5
 cf-python==3.16.2
 cf-units==3.2.0
@@ -23,7 +23,7 @@ dask[array]==2023.4.0
 docopt==0.6.2
 elasticsearch==7.12.0
 fbs @ git+https://github.com/cedadev/ceda-fbs@f7e96dbec501e107a89007a6a1e88f4e0717952a
-fonttools==4.53.1
+fonttools==4.54.1
 fsspec==2024.9.0
 heapdict==1.0.1
 idna==2.10
