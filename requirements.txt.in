@@ -1,5 +1,5 @@
 # Run this to compile to requirements.txt
-# uv pip compile --allow-unsafe --no-annotate --output-file=requirements.txt --resolver=backtracking --no-strip-extras requirements.txt.in --python-version=3.11 --python=3.11 --upgrade
+# uv pip compile --allow-unsafe --no-annotate --output-file=requirements.txt --resolver=backtracking --no-strip-extras requirements.txt.in --python-version=3.9 --python=3.9 --upgrade
 
 anytree==2.8.0
 brotlipy==0.7.0
