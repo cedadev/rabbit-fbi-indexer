@@ -24,6 +24,7 @@ ldap3==2.9
 locket==0.2.0
 netcdf-flattener==1.2.0
 numpy==1.22.0
+pandas==1.2.3
 partd==1.2.0
 pika==1.2.0
 pyasn1==0.4.8
@@ -33,6 +34,7 @@ PyYAML>=5.4.1
 requests-aws4auth==0.9
 tqdm==4.60.0
 voluptuous==0.11.5
+xarray==0.17.0
 xmltodict==0.12.0
 zict==2.0.0
 
